@@ -16,13 +16,24 @@ var li;
 
 // Functions
 function addItem() {
-    //var input = document.getElementById('input');
+    var input = document.getElementById('input');
     var item = input.value;
     var textNode = document.createTextNode(item);
+    let errorMsg = document.getElementById('errorMsg');
+    let small = document.createElement('small');
+    let smallText = document.createTextNode('Write Something first');
+    let smallTextSm = document.createTextNode('Very Small Work Name!');
+    let smallTextBig = document.createTextNode('Very Small Work Name!');
 
-    if (item === '') {
-        return false;
+    if (item.trim() === '') {
+        if (!errorMsg.firstElementChild) {
+            small.appendChild(smallText);
+            errorMsg.appendChild(small);
+        }
     } else {
+        if (errorMsg.childNodes.length > 0) {
+            errorMsg.removeChild(errorMsg.childNodes[0]);
+        }
         // create li
         li = document.createElement('li');
 
