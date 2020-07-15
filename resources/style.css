@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/background.jpg);
+    font-family: 'Open Sans', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -122,7 +130,6 @@ input::placeholder {
     font-size: 20px;
     padding-left: 5px;
     box-sizing: border-box;
-    margin-bottom: 20px;
     border: 2px solid #b5c5dd;
     border-radius: 10px;
 }
@@ -144,6 +151,7 @@ input::placeholder {
 }
 
 .container .control #add {
+    margin-top: 60px;
     background-color: #2980b9;
     border-radius: 10px;
 }
